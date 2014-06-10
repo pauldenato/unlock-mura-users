@@ -1,0 +1,19 @@
+<plugin>
+<name>Unlock Users</name>
+<!-- the package value becomes a part of the directory name where the plugin is installed. -->
+<package>unlockUsers</package>
+	<!-- This tells Mura to only use the <package> name for the directory structure -->
+<directoryFormat>packageOnly</directoryFormat>
+<version>1.0</version>
+<provider>Paul Denato</provider>
+<providerURL>http://www.denato.com</providerURL>
+<category>Utility</category>
+<settings/>
+  <eventHandlers>
+	<eventHandler event="onApplicationLoad" component="com.events" persist="false" />
+  </eventHandlers>
+  <displayobjects location="global">
+		<!-- Add Name -->
+		<displayobject name="Unlock Users" displayObjectFile="displayObjects/dsp_unLockUsers.cfm"/>
+ </displayobjects>
+</plugin>

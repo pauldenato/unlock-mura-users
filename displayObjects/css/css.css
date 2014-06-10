@@ -1,0 +1,49 @@
+/* @override http://dev.education/plugins/coursesclasses/displayObjects/css/css.css */
+
+/* CSS Document */
+#loadingInfoDetails {
+	margin:15% 45% 15%
+}
+
+#ui-datepicker-div { display: none; }
+
+.instructorNote {background:url(../images/icon_comments.png) top left no-repeat;display: block;font-size: 9px;width:65%; margin-left:29%; padding-left:15px; }
+
+.rosterNote{background:url(../images/icon_comments.png) top left no-repeat;display: block;font-size: 9px; padding-left:15px;}
+
+.chgJQInput{padding: 4px; width: 65%; margin-bottom:10px; font-weight:normal; color:#333}
+
+.submitButtonHolder {float:right;margin:15px 20px 15px 0}
+
+/*.submitButtonHolder button { border: 1px solid #CCCCCC; }*/
+
+.charsused {margin:5px 25px 20px 0;float:right;}
+
+.clear{clear:both}
+
+.requiredField { background:url(../images/icon_star.png) top right no-repeat; padding-right:10px}
+
+#plugin-body fieldset, #classSteps fieldset, #courseSteps fieldset, #instructorInfo fieldset, #instructorSelect fieldset {
+	border: solid 1px #4d86c1;
+	padding:20px 10px 0;
+	background: #e9f3f7;
+	position: relative;
+}
+
+#plugin-body fieldset legend, #classSteps fieldset legend, #courseSteps fieldset legend, #instructorInfo fieldset legend, #instructorSelect fieldset legend{
+	padding: 0 10px 5px 10px;
+	background: #fff;
+	border: solid 1px #4d86c1;
+	border-width: 0 1px;
+	color: #4d86c1;
+	position: absolute;
+	top: -.8em;
+}
+
+#primary form {
+	margin-bottom: 0;
+	}
+
+#primary fieldset {
+	margin-top:25px;
+	}
