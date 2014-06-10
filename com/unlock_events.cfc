@@ -6,7 +6,7 @@
   <cfquery name="getAllLockedUsers" datasource="#application.configBean.getDatasource()#">
    select username, strikes, lastAttempt
    from tuserstrikes
-   where strikes >= '5'
+   where strikes >= <cfqueryparam cfsqltype="cf_sql_integer" value="5" >
   </cfquery>
 		<cfoutput>
  <h3>These Users are locked out of Mura</h3>
@@ -31,13 +31,13 @@
   <cfquery name="unlockTheUser" datasource="#application.configBean.getDatasource()#">
     UPDATE tuserstrikes
     SET strikes = '0'
-   where username = '#arguments.theUser#'
+   where username = <cfqueryparam cfsqltype="cf_sql_varchar" value="#arguments.theUser#" >
   </cfquery>
 
   <cfquery name="getLastUser" datasource="#application.configBean.getDatasource()#">
    select username, strikes, lastAttempt
    from tuserstrikes
-   where username = '#arguments.theUser#'
+   where username = <cfqueryparam cfsqltype="cf_sql_varchar" value="#arguments.theUser#" >
   </cfquery>
 
  <cfif getLastUser.strikes EQ 0>
