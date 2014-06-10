@@ -55,6 +55,7 @@ sendForm(theUser);
 </script>
  <div id="plugin-body">
  <!-- CONTENT HERE -->
+ <h2>#variables.pluginConfig.getName()#</h2>
   <div id="classSteps">
 			<!---Call to get the locked out users--->
    <cfobject component="plugins.#variables.pluginConfig.getDirectory()#.com.unlock_events" name="checkForLocked" >
