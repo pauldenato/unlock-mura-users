@@ -6,7 +6,8 @@
   <cfquery name="getAllLockedUsers" datasource="#application.configBean.getDatasource()#">
    select username, strikes, lastAttempt
    from tuserstrikes
-   where strikes >= <cfqueryparam cfsqltype="cf_sql_integer" value="5" >
+   <!---Value must exist in settings.ini.cfm--->
+   where strikes >= <cfqueryparam cfsqltype="cf_sql_integer" value="#trim(application.configBean.getValue('loginstrikes'))#" >
   </cfquery>
 		<cfoutput>
  <h3>These Users are locked out of Mura</h3>
